@@ -10,13 +10,15 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.[hash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath:'/'
     },
     devtool: 'inline-source-map',
-    devServer: {
-        contentBase: './dist',
-        hot: true
-    },
+    // devServer: {
+    //     contentBase: './dist',
+    //     port: 5000,
+    //     hot: true
+    // },
     module: {
         rules: [
             {
