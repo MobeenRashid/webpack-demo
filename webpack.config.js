@@ -10,8 +10,14 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.[hash].js',
+        // chunkFilename: '[name].bundle.[hash].js',
         path: path.resolve(__dirname, 'dist'),
         publicPath:'/'
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
     },
     devtool: 'inline-source-map',
     // devServer: {
